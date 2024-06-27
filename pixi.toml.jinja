@@ -1,0 +1,18 @@
+[project]
+name = "{{ project_name }}"
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Your Name <and@email>"]
+channels = ["conda-forge", "https://prefix.dev/r-forge/"]
+platforms = ["osx-64"]
+
+[tasks]
+rstudio = "open {{ project_name }}.Rproj"
+
+[dependencies]
+r-base = "{{ r_version }}"
+
+[activation.env]
+PIXI_R_LIBS = "$CONDA_PREFIX/lib/R/library"
+R_LIBS_USER = "$PIXI_R_LIBS"
+R_LIBS = "$PIXI_R_LIBS"

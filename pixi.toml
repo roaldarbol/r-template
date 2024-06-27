@@ -1,5 +1,5 @@
 [project]
-name = {{project_name}}
+name = "r-template"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Mikkel Roald-Arbøl <github.ggb9a@simplelogin.co>"]
@@ -9,3 +9,7 @@ platforms = ["osx-64"]
 [tasks]
 
 [dependencies]
+copier = ">=9.2.0,<9.3"
+
+[pypi-dependencies]
+jinja2-shell-extension = "*"

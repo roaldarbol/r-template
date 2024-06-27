@@ -1,4 +1,24 @@
+_jinja_extensions:
+  - jinja2_shell_extension.ShellExtension
+
 # questions
 project_name:
-    type: str
-    help: What is your project name?
+  type: str
+  help: What is your project name?
+
+r_version:
+  type: str
+  help: Which version of R would you like to use?
+  default: "4.4"
+
+author:
+  type: str
+  help: What is your name?
+  default: "{{'git config user.name'|shell}}"
+
+_exclude:
+  - pixi.lock
+  - .pixi
+  - .git
+  - copier.yml
+  - .copier-answers.yml
