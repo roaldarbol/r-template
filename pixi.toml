@@ -1,0 +1,11 @@
+[project]
+name = {{ project_name }}
+version = "0.1.0"
+description = "Add a short description here"
+authors = ["Mikkel Roald-Arbøl <github.ggb9a@simplelogin.co>"]
+channels = ["conda-forge"]
+platforms = ["osx-64"]
+
+[tasks]
+
+[dependencies]
