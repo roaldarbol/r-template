@@ -41,3 +41,4 @@ _exclude:
   - .git
   - copier.yml
   - .copier-answers.yml
+  - badge.json
