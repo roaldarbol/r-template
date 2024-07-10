@@ -5,7 +5,7 @@
 # Features
 - Use the R version you want
 - Sets library paths to `.pixi`
-- Supports multiple IDEs and installs their dependencies (RStudio, VS Code, JupyterLab, Positron)
+- Supports multiple IDEs (RStudio, VS Code, JupyterLab, Positron)
 - Use tasks to quickly open the project in your preferred IDE
 
 # Usage
