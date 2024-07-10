@@ -1,5 +1,7 @@
 # R Template for Pixi
 
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
+
 # Features
 - Use the R version you want
 - Sets library paths to `.pixi`
