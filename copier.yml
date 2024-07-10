@@ -8,7 +8,30 @@ r_version:
   help: Which version of R would you like to use?
   default: "4.4"
 
+platform:
+  help: Which platform are you using?
+  multiselect: true
+  choices:
+    Windows: 
+      value: win-64
+    Linux:
+      value: linux-64
+    MacOS:
+      value: osx-64
+
+ide:
+  type: yaml
+  help: Which IDEs will you use for this project? (multiple can be selected)
+  multiselect: true
+  choices:
+    - RStudio
+    - Visual Studio Code
+    - JupyterLab
+    - Positron
+  default: ["RStudio"]
+
 _exclude:
+  - .DS_Store
   - pixi.lock
   - .pixi
   - .git

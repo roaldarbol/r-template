@@ -4,19 +4,32 @@ version = "0.1.0"
 description = "Add a short description here"
 authors = ["Your Name <and@email>"]
 channels = ["conda-forge", "https://prefix.dev/r-forge/"]
-platforms = ["osx-64"]
+platforms = {{ platform }}
 
 [tasks]
 
-[target.osx-64.tasks]
-rstudio = "open {{ project_name }}.Rproj"
-code = "open -a \"Visual Studio Code\" ."
-
 [dependencies]
-r-base = "{{ r_version }}"
-radian = ">=0.6.12,<0.7"
-r-languageserver = ">=0.3.16,<0.4"
-r-httpgd = ">=1.3.1,<1.4"
+r-base = "{{ r_version }}.*"
+{%- if 'Visual Studio Code' in ide %}
+radian = ">=0.6.12,<0.7" # Visual Studio Code
+r-languageserver = ">=0.3.16,<0.4" # Visual Studio Code
+r-httpgd = ">=1.3.1,<1.4" # Visual Studio Code
+{%- endif %}
+{%- if 'JupyterLab' in ide %}
+jupyterlab = ">=4.2.3" # JupyterLab
+pixi-kernel = ">=0.3.0" # JupyterLab
+r-irkernel = ">=1.3.2" # JupyterLab
+{% endif %}
+
+{%- if 'osx-64' in platform %}
+[target.osx-64.tasks]
+{%- if 'RStudio' in ide %}
+rstudio = "open {{ project_name }}.Rproj"
+{%- endif %}
+{%- if 'Visual Studio Code' in ide %}
+code = "open -a \"Visual Studio Code\" ."
+{%- endif %}
+{%- endif %}
 
 [activation.env]
 PIXI_R_LIBS = "$CONDA_PREFIX/lib/R/library"
