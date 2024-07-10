@@ -1,0 +1,14 @@
+{
+    "r.bracketedPaste": true,
+    "r.plot.useHttpgd": true,
+    "r.rpath.mac": "${workspaceFolder}/.pixi/envs/default/bin/R",
+    "r.rterm.mac": "${workspaceFolder}/.pixi/envs/default/bin/radian",
+    "r.rpath.linux": "${workspaceFolder}/.pixi/envs/default/bin/R",
+    "r.rterm.linux": "${workspaceFolder}/.pixi/envs/default/bin/radian",
+    "r.rpath.windows": "${workspaceFolder}/.pixi/envs/default/bin/R",
+    "r.rterm.windows": "${workspaceFolder}/.pixi/envs/default/bin/radian",
+    // "r.rterm.option": [
+    //     "--no-site-file",
+    //     "--r-binary=${workspaceFolder}/.pixi/envs/default/bin/R"
+    // ]
+}
