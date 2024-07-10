@@ -18,6 +18,10 @@ platform:
       value: linux-64
     MacOS:
       value: osx-64
+  validator: >
+    {%- if platform | length < 1 -%}
+    Please choose at least 1 operating system
+    {%- endif -%}
 
 ide:
   type: yaml
