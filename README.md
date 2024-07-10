@@ -1,8 +1,15 @@
-# r-template for pixi
-This template generates variables, R version and some handy R tasks. You need to have [pixi](https://pixi.sh) installed. 
+# R Template for Pixi
 
-## Using `pixi exec`
-To generate the template in the current folder:
+# Features
+- Use the R version you want
+- Sets library paths to `.pixi`
+- Supports multiple IDEs and installs their dependencies (RStudio, VS Code, JupyterLab, Positron)
+- Use tasks to quickly open the project in your preferred IDE
+
+# Usage
+To use the template it is required to have [pixi](https://pixi.sh) installed.
+
+Then, generate the template in the current folder:
 ```
 pixi exec copier copy gh:roaldarbol/r-template .
 ```
@@ -11,8 +18,8 @@ or to generate a new folder:
 pixi exec copier copy gh:roaldarbol/r-template my-new-project
 ```
 
-## Using `pixi init --template`
-A feature that is under development is the `--template` flag for `pixi init`. Once that is implemented it will be the preferred way to install templates, the usage will be along the lines of:
-```
-pixi init --template gh:roaldarbol/r-template
-```
+Then, from the terminal open your project in your preferred IDE with cross-platform commands:
+- RStudio: `pixi run rstudio`
+- Visual Studio Code: `pixi run code`
+- JupyterLab: `pixi run jupyter lab`
+- Positron: `pixi run positron`
