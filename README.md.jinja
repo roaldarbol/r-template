@@ -1,0 +1,18 @@
+# {{ project_name }}
+
+# Project details
+This project uses [pixi](https://pixi.sh) to manage dependencies and workspace. It is configured to work with on {{ platform }}. 
+
+## Open project
+Open the project in your preferred IDE:
+{%- if "RStudio" in ide %}
+    - Open in RStudio: `pixi run rstudio`
+{%- endif %}
+{%- if "Visual Studio Code" in ide %}
+    - Open in Visual Studio Code: `pixi run code`
+{%- endif %} 
+{%- if "JupyterLab" in ide %}
+    - Open in JupyterLab: `pixi run jupyter lab`
+{%- endif %} 
+
+This project was generated with the [R Pixi template](https://github.com/roaldarbol/r-template).
