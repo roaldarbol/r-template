@@ -1,4 +1,13 @@
 # questions
+project_type:
+  type: yaml
+  help: What type of project are you making?
+  choices:
+    Analysis:
+      value: analysis
+    R package:
+      value: package
+
 project_name:
   type: str
   help: What is your project name?
@@ -33,6 +42,18 @@ ide:
     - JupyterLab
     - Positron
   default: ["RStudio"]
+
+license:
+  type: yaml
+  help: Which license should the project use?
+  choices:
+    MIT:
+      value: mit
+    None:
+      value: none
+  default: mit
+
+website:
 
 _exclude:
   - .DS_Store
